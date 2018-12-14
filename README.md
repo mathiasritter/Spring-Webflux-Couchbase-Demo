@@ -31,7 +31,7 @@ In addition, the `CouchbaseDemoApplication` is the entry point of the applicatio
 
 The API is queried by sending HTTP requests to `127.0.0.1:8080` followed by the URI listed below.
 
-#### Endpoints
+### Endpoints
 
 | Intention       | HTTP Method  | URI            | Request Body       |
 | :---------------|:------------:| :--------------| :-----------------:|
@@ -43,7 +43,7 @@ The API is queried by sending HTTP requests to `127.0.0.1:8080` followed by the 
 
 Note that the `{id}` must be replaced with the corresponding id of the person.
 
-##### Person Request Body
+#### Person Request Body
 
 The Person request body is in JSON and must be structured as follows:
 
