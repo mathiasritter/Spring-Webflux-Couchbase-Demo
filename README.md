@@ -60,18 +60,18 @@ Note that the `{id}` must be replaced with the corresponding id of the person.
 
 The Person request body is in JSON and must be structured as follows:
 
-| attribute   | validations                                  |
-| :-----------| :--------------------------------------------|
-| `id`        | required for create, not required for update |
-| `lastName`  | required, max. 30 characters                 |
-| `firstName` | required, max. 30 characters                 |
+| attribute   | validations                                              |
+| :-----------| :--------------------------------------------------------|
+| `id`        | required for create, not required and ignored for update |
+| `lastName`  | required, max. 30 characters                             |
+| `firstName` | required, max. 30 characters                             |
 
 Example:
 ```json
 {
    "id": "p1",
-   "lastName": "John",
-   "firstName": "Doe"
+   "firstName": "John",
+   "lastName": "Doe"
 }
 ```
 
