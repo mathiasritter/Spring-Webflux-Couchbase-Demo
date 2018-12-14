@@ -23,7 +23,20 @@ The project is structured as follows:
 
 In addition, the `CouchbaseDemoApplication` is the entry point of the application.
 
+## How to configure couchbase
+1. Download and install Couchbase
+2. Run through the initial setup and navigate to the dashboard on `http://127.0.0.1:8091`
+3. In `Buckets`: create a new bucket called `demo`
+4. In `Security`: Add a new user called `demouser` with password `123456` and grant application access to the bucket `demo`
+5. In `Query`: Add a primary index to the bucket `demo` by executing the query `CREATE PRIMARY INDEX ON demo USING GSI;`
+6. In `Indexes` -> `Views`: Add a new development view
+    - design document name is `person`
+    - view name is `all`
+    - edit the view and change the code of Map to `function (doc, meta) { emit(meta.id, doc); }`
+7. In `Indexes` -> `Views`: Publish the view
+
 ## How to run
+Before you run the application first, make sure that you configured couchbase as described above.
 1. Start couchbase on the default port 8091
 2. Run ` ./mvnw spring-boot:run` and Spring Boot will start on port 8080
 
