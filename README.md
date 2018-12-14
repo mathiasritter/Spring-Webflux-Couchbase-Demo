@@ -46,13 +46,13 @@ The API is queried by sending HTTP requests to `127.0.0.1:8080` followed by the 
 
 ### Endpoints
 
-| Intention       | HTTP Method  | URI            | Request Body       |
-| :---------------|:------------:| :--------------| :-----------------:|
-| Get all persons | GET          | `/persons `    | empty              |
-| Get person      | GET          | `/person/{id}` | empty              |
-| Create person   | POST         | `/persons `    | Person (see below) |
-| Update person   | PUT          | `/person/{id}` | Person (see below) |
-| Delete person   | DELETE       | `/person/{id}` | empty              |
+| Intention       | HTTP Method  | URI             | Request Body       |
+| :---------------|:------------:| :---------------| :-----------------:|
+| Get all persons | GET          | `/persons `     | empty              |
+| Get person      | GET          | `/persons/{id}` | empty              |
+| Create person   | POST         | `/persons `     | Person (see below) |
+| Update person   | PUT          | `/persons/{id}` | Person (see below) |
+| Delete person   | DELETE       | `/persons/{id}` | empty              |
 
 Note that the `{id}` must be replaced with the corresponding id of the person.
 
